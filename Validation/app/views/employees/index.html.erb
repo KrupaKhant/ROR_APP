@@ -1,0 +1,13 @@
+<h1>Employees</h1>
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li>
+      <a href="/employees/<%= employee.id %>">
+        Employee <%= employee.id %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Employee", new_employee_path %>

@@ -1,0 +1,84 @@
+<h1>New Employee</h1>
+
+<%= form_with model: @employee do |form| %>
+  <div>
+    <%= form.label :FirstName %><br>
+    <%= form.text_field :firstname %>
+    <% @employee.errors.full_messages_for(:firstname).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :LastName %><br>
+    <%= form.text_field :lastname %>
+    <% @employee.errors.full_messages_for(:lastname).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %>
+    <% @employee.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Username %><br>
+    <%= form.text_field :username %>
+    <% @employee.errors.full_messages_for(:username).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Password %><br>
+    <%= form.text_field :password %>
+    <% @employee.errors.full_messages_for(:password).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Mobile %><br>
+    <%= form.text_field :phonenumber %>
+    <% @employee.errors.full_messages_for(:phonenumber).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Zipcode %><br>
+    <%= form.text_field :zipcode %>
+    <% @employee.errors.full_messages_for(:zipcode).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Plan_Start_Date %><br>
+    <%= form.date_field :planstartdate %>
+  </div>
+
+  <div>
+    <%= form.label :Plan_End_Date %><br>
+    <%= form.date_field :planenddate %>
+    <% @employee.errors.full_messages_for(:planenddate).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :Plan_Days %><br>
+    <%= form.number_field :totaldaysofplan %>
+    <% @employee.errors.full_messages_for(:totaldaysofplan).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
