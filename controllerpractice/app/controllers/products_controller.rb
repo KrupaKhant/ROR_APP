@@ -1,5 +1,5 @@
 class ProductsController < AdminController
-  
+    skip_before_action :require_admin, only: [:new,:create,:show,:search]
     def index
         @products = Product.all
     end
