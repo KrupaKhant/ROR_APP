@@ -12,7 +12,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :update, :edit, :show, :destroy]
 
-  get '/login', to: 'sessions#create'
-  post '/login', to: 'sessions#create'
   
 end
