@@ -1,5 +1,5 @@
 class ProductsController < AdminController
-  before_action :require_admin, only: [:destroy]
+  
     def index
         @products = Product.all
     end
