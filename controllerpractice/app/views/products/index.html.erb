@@ -1,0 +1,40 @@
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+<h1>List of Products</h1>
+
+<table style="border: 1px solid black">
+<thead >
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    
+    <% @products.each do |product|%>
+
+        <tr>
+        <td><%= product.product_name%></td>
+        <td><%= product.product_price%></td>
+        <td><%= product.product_desc%></td>
+
+        <td><%= link_to "Delete", product_path(product), data: {turbo_method: :delete} %></td>
+        </tr>
+
+    <% end %>
+</tbody>
+
+</table>
+
+<p><%= button_to "New Products", new_product_path, method: :get %></p>

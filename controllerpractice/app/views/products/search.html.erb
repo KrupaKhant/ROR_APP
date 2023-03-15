@@ -1,0 +1,20 @@
+<h1>Search Products</h1>
+
+<%= form_tag products_search_path, method: :get do %>
+  <%= label_tag :search_query, "Search by product name:" %>
+  <%= text_field_tag :search_query, params[:search_query], placeholder: "Enter search query" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<% if @products.any? %>
+    <h2>Search Results for <%= @search_query %>:</h2>
+  <% @products.each do |product| %>
+    <p>
+      Product: <%= product.product_name %><br>
+      Price: <%= product.product_price %><br>
+      Description: <%= product.product_desc %>
+    </p>
+  <% end %>
+<% else %>
+  <p>No products found for <%= @search_query %>.</p>
+<% end %>
