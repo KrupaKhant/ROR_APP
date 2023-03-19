@@ -1,0 +1,5 @@
+th:
+  hello: "สวัสดี, %{name}!"
+  users:
+    one: "1 นับ"
+    other: "%{count} นับ"

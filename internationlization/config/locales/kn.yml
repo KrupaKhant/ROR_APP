@@ -1,0 +1,5 @@
+kn:
+  hello: "ನಮಸ್ಕಾರ, %{name}!"
+  users:
+    one: "1 ಎಣಿಕೆ"
+    other: "%{count} ಎಣಿಕೆ"

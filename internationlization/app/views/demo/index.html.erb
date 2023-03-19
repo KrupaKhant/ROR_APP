@@ -1,0 +1,8 @@
+<h1><%= t('hello', name: @name) %></h1>
+<p><%= t('users', count: @users_count) %></p>
+<p>
+<strong>In English: </strong><%= I18n.with_locale(:en) { t('hello',name: @name) } %> <br>
+<strong>In Hindi: </strong><%= I18n.with_locale(:hi) { t('hello',name: @name) } %>  <br>
+<strong>In Kannada: </strong><%= I18n.with_locale(:kn) {t('hello',name: @name)}%><br>
+<strong>In Thai: </strong><%= I18n.with_locale(:th) { t('hello',name: @name) } %> 
+</p>

@@ -1,0 +1,5 @@
+hi:
+  hello: "नमस्ते, %{name}!"
+  users:
+    one: "1 गिनती"
+    other: "%{count} गिनती"
