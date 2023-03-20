@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Products</h1>
+
+<div id="products">
+  <% @products.each do |product| %>
+    <%= render product %>
+    <p>
+      <%= link_to "Show this product", product %> |
+      <%=link_to "Add #{product.name} to cart", add_to_cart_products_path(product),:class => "btn btn-primary" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New product", new_product_path %>
+<br><p>
+<%= form_tag('/logout', method: :delete) do %>
+  <%= submit_tag "Log Out" %>
+<% end %></p>

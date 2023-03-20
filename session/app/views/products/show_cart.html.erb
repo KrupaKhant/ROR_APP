@@ -1,0 +1,37 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+<h2>Your Cart</h2>
+
+<table class="table">
+  <tr>
+    <td>NAME</td>
+    <td>QUANTITY</td>
+    <td>PRICE</td>
+    <td>ADD</td>
+    <td>REMOVE</td>
+  </tr>
+
+
+
+
+<% session[:product_id].uniq.each do |a| %>
+   <tr>
+   <td><%= Product.find(a).name%></td>
+   <td>  <%= session[:product_id].count(a)%></td>
+   <td> <%= (Product.find(a).price)*session[:product_id].count(a)%></td>
+   <td> <%=link_to "Add",add_to_cart_products_path(a),:class => "btn btn-success"%></td>
+   <td> <%=link_to "Remove",delete_from_cart_products_path(a),:class => "btn btn-primary"%></td>
+   </tr>
+<%end%>
+</table>
+
+
+<p><%= button_to "Back", root_path, method: :get %></p>
