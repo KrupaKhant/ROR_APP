@@ -1,1 +1,6 @@
-# ROR_APP
+# ROR_APP![query1](https://user-images.githubusercontent.com/126106142/229345749-a77698f2-fd45-4532-8642-b55f41b0fc98.png)
+![query2](https://user-images.githubusercontent.com/126106142/229345753-0da6e4cf-bc3d-44b3-9188-19594898808b.png)
+![query3](https://user-images.githubusercontent.com/126106142/229345756-afe2460f-45d0-49b5-9e05-f69acde204ab.png)
+![query4](https://user-images.githubusercontent.com/126106142/229345759-c9518efa-2208-4697-9196-a08b1938c927.png)
+![query5](https://user-images.githubusercontent.com/126106142/229345762-3178311a-c035-4d2a-b546-66ec1d928e78.png)
+![query6](https://user-images.githubusercontent.com/126106142/229345766-6b34a0ed-ba41-4190-81c8-d2c74b540929.png)
