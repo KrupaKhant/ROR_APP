@@ -1,0 +1,22 @@
+<h1>projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td> 
+        <td><%= project.description %></td> 
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to "New Company", new_company_path %></p>

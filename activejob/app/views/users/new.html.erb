@@ -1,0 +1,12 @@
+<h1>Users Page</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :Name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :Email %>
+  <%= f.email_field :email %><br>
+  <%= f.label :BirthDay %>
+  <%= f.date_field :birthdate %><br>
+  <%= f.submit "Login" %>
+
+<% end %>
