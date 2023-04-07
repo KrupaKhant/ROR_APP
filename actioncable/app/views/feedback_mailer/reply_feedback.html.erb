@@ -1,0 +1,17 @@
+<p>Dear <%= @user.email %>,</p>
+
+<p>Thank you for your feedback:</p>
+
+<blockquote>
+  <%= simple_format(@feedback.description) %>
+</blockquote>
+
+<p>Here is our reply:</p>
+
+<blockquote>
+  <%= simple_format(@feedback.reply) %>
+</blockquote>
+
+
+<p>Best regards,</p>
+<p>The Admin Team</p>

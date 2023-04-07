@@ -1,0 +1,14 @@
+<h1>Feedbacks with rating less than 3</h1>
+
+<% @feedbacks.each do |feedback| %>
+  <div>
+    <p><%= feedback.description %></p>
+    <p>Rating: <%= feedback.rating %></p>
+    <p>Created by: <%= feedback.user.email %></p>
+    <%= form_for [:admin, feedback], url: admin_feedback_path(feedback), method: :put do |f| %>
+      <%= f.text_area :reply, rows: 3 %>
+      <%= f.submit "Reply" %>
+    <% end %>
+  </div>
+<% end %>
+
